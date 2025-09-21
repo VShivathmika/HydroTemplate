@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hydro-Blog page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+      body{
+            scroll-behavior: smooth;
+        }
+html{ scroll-behavior: smooth; }
+*{ box-sizing: border-box; }
+body{ margin: 0; font-family: Arial, sans-serif; }
+
+/* HEADER */
+header{ position: fixed; width: 100%; 
+    z-index: 1000; background-color:
+     #fff; top: 0;
+     }
+nav{ padding: 10px 160px; 
+    margin-bottom: 20px;
+    display: flex; justify-content: space-between;
+     align-items: center; flex-wrap: wrap; }
+a{ color: #000000; text-decoration: none; }
+ul{ list-style-type: none; display: flex; flex-wrap: wrap; padding: 0; margin: 0; align-items: center; }
+.hydro{ font-size: 25px; font-weight:500; padding-top: 10px; }
+.hydro:hover{ color: black; }
+.lists{ margin-left: 70px; }
+.lists li{ margin-left: 50px; padding-top: 15px; font-size: 15px; }
+a:hover{ color: #da2222; }
+.icons{ margin-left: 150px; }
+.icons li{ margin-left: 30px; padding-top: 15px; font-size: 15px; }
+.join{ margin-top: 10px; }
+.signup{ border-radius: 40px; background-color:#cd1f1f; color: #ffffff; text-align: center; margin-left: 30px; padding: 18px 30px; }
+.signup:hover{ background-color: #000000; }
+
+/* MAIN IMAGE */
+.image{ height: 500px; width: 100%; background-image: linear-gradient(#007cf9, #51ff00be), url(https://img.freepik.com/premium-photo/white-office-desk-table-with-blank-notebook-computer-keyboard-other-office-supplies_273003-1491.jpg); background-size: cover; background-position: center; }
+.content{ margin-left: 100px; padding: 200px 100px 100px; }
+.heading{ font-size: 35px; color: #ffffff; margin-left: 80px; }
+
+/* BLOG CONTENT */
+.image1{ width: 100%; max-width: 1000px; height: auto; padding: 50px 0 25px; display: block; margin: auto; }
+.container,.matter3{ padding: 0px 10% 10px 10%; }
+.happy{ font-size: xx-large; }
+.matter1,.matter3,.matter4,.blogsample{ color: #00000087; }
+.matter1{ font-size: medium; }
+.matter2{ font-size: 20px; margin: 0px; }
+.matterdiv{ background-color: #ffffff; border-left: 5px solid #f5f5f5; padding: 10px; height: auto; }
+.container1{ height: 130px; width: 100%; max-width: 850px; background-color:#f5f5f5; margin: 20px auto; border-right: #000000 4px solid; text-align: center; }
+.blogsample{ padding: 50px; font-size: large; }
+.bloglists{ list-style-type: disc; display: block; padding: 10px 15%; }
+.share{ text-align: center; font-size: large; }
+.icondivs{ height: auto; width: 100%; max-width: 500px; margin: 10px auto; text-align: center; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.div1,.div2,.div3{ height: auto; width: auto; border: 1px solid black; background-color: #2103b7; border-radius: 40PX; padding: 10PX 15px; font-size: 12px; text-align: center; }
+.div2{ background: #0073ff; }
+.div3{ background-color: #cd1f1f; }
+.div_icon{ color: #ffffff; }
+
+/* FOOTER */
+.footer{ background-color: #212020; color: #f8f8f8; }
+.foot{ padding: 50px 10%; display: flex; flex-wrap: wrap; justify-content: space-between; }
+.foot a{ color: #fefdfd; }
+ol li{ color: #fefdfddc; list-style-type: none; margin-top: 5px; padding-top: 5px; } 
+.footline{ border: 0.01px solid #f5f5f547; }
+.headings{ font-size: xx-large; margin-bottom: 0px; }
+.footer2{ color: whitesmoke; margin: 5px 10%; padding-bottom: 50px; }
+.bottomcall{ display:block; margin-top:10px; }
+.bottomicon{ margin-left: 20px; color: #ffffff; }
+.bottomicons{ margin-top:10px; }
+
+/* RESPONSIVE */
+@media(max-width:1200px){
+    nav{ padding: 10px 50px; }
+    .lists{ margin-left: 20px; }
+    .icons{ margin-left: 50px; }
+    .container,.matter3{ padding: 0px 5% 10px 5%; }
+    .bloglists{ padding: 10px 5%; }
+}
+
+@media(max-width:992px){
+    nav ul{ flex-direction: column; align-items: flex-start; gap: 10px; }
+    .lists{ margin-left: 0; margin-top: 10px; }
+    .icons{ margin-left: 0; margin-top: 10px; }
+    .signup{ margin-left: 0; margin-top: 10px; align-self: flex-start; }
+    .content{ margin-left: 20px; padding: 150px 20px 50px; }
+    .heading{ font-size: 28px; margin-left: 0; }
+    .container1{ width: 90%; }
+    .icondivs{ max-width: 100%; }
+}
+
+@media(max-width:768px){
+    .heading{ font-size: 24px; }
+    .happy{ font-size: large; }
+    .matter2{ font-size: 18px; }
+    .container1{ height: auto; padding: 20px; }
+    .blogsample{ padding: 30px 10px; }
+    .bloglists li{ margin-bottom: 10px; }
+}
+
+@media(max-width:480px){
+    nav{ padding: 10px 20px; }
+    .image{ height: 300px; }
+    .content{ padding: 100px 10px 30px; }
+    .heading{ font-size: 20px; }
+    .icondivs{ flex-direction: column; gap: 10px; }
+    .container,.matter3{ padding: 0px 10px 10px 10px; }
+    .bloglists{ padding: 0px 10px; }
+}
+</style>
+</head>
+<body>
+<header class="header">
+    <nav>
+        <ul>
+            <li class="hydro"><a class="hydro" href="./HydroProject.html">Hydro</a></li>
+            <li>
+                <ul class="lists">
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <li><a href="./index.html#blog">Blog</a></li>
+                    <li><a href="./index.html#ourwork">Our work</a></li>
+                    <li><a href="./index.html#contacts">Contacts</a></li>
+                </ul>
+            </li>
+            <li class="icons">
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </li>
+            <li class="join"><a class="signup" href="./account.html">Sign in/Join</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+<section class="image">
+    <div class="content">
+       <p class="heading">Do you Know What Thing Really <br> Makes Artist Nowadays?</p>
+    </div>
+</section>
+<section>
+    <div>
+        <img class="image1" src="https://technext.github.io/hydro/images/blog-detail-image.jpg" alt="">
+    </div>
+    <div class="container">
+        <p class="happy">What makes you happy everyday?</p>
+        <p class="matter1">Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur <br>
+        dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue <br>
+        vulputate voluptate neque</p>
+        <div class="matterdiv">
+        <p class="matter2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quisquam, aut, eum, natus excepturi  <br>
+        impedit ipsa rerum ratione id dolores ducimus minus eos veniam similique.</p>
+        </div>
+        <p class="matter4">Vivamus quis velit sed ante suscipit aliquam nec sed ex. Maecenas porta leo at mi suscipit congue. Donec ipsum metus, tristique eu <br>
+        leo ut, luctu Vivamus sit amet purus nec risus mollis tempor.</p>
+    </div>
+    <div class="container1">
+        <p class="blogsample">Blog Sample Advertising</p>
+    </div>
+    <ul class="bloglists">
+        <li>Brand Identity ipsum dolor eget vestibulum justo imper diet.</li>
+        <li>Social Marketing porta leo at mi suscipit congue. Donec ipsum metus, tristique leo luctus.</li>
+        <li>Wordpress Themes augue vulputate voluptate neque, curabitur dolor vitae massa.</li>
+    </ul>
+    <p class="matter3">Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur <br>
+    dolor libero sodales vitae elit massa.</p>
+    <p class="share">Share this article</p>
+    <div class="icondivs">
+        <div class="div1">
+            <a class="div_icon" href=""><i class="fa-brands fa-square-facebook"></i> <span>FACEBOOK</span></a>
+        </div>
+        <div class="div2">
+             <a class="div_icon" href=""><i class="fa-brands fa-twitter"></i> <span>TWITTER</span></a>
+        </div>
+        <div class="div3">
+            <a class="div_icon" href=""><i class="fa-brands fa-google-plus-g"></i> <span>GOOGLE PLUS</span></a>
+        </div>
+    </div>
+</section>
+</main>
+<footer class="footer">
+<section class="foot">
+    <div class="foot1">
+        <ol>
+            <li class="headings">Hydro Company</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+            <li>sed do eiusmod tempor incididunt ut labore et dolore</li>
+            <li>magna aliqua.</li>
+        </ol>
+    </div>
+    <div class="foot2">
+        <ol>
+             <li class="headings">Company</li>
+             <li><a href="">About us</a></li>
+             <li><a href="">join our team</a></li>
+             <li><a href="">Read Blog</a></li>
+             <li><a href="">Press</a></li>
+        </ol>
+    </div>
+    <div class="foot3">
+        <ol>
+            <li class="headings">Services</li>
+            <li><a href="">Pricing</a></li>
+            <li><a href="">Documentation</a></li>
+            <li><a href="">Support</a></li>
+        </ol>
+    </div>
+    <div class="foot3">
+        <ol>
+            <li class="headings">Find us</li>
+            <li>123 Grand Rama IX,</li>
+            <li>Krung Thep Maha Nakhon 10400</li> 
+        </ol>
+    </div>
+</section>
+<section class="footer2">
+    <hr class="footline">
+     <p>Copyright © 2017 Your Company <span class="bottomcall">Call us (+66) 010-020-0340</span> 
+                <span class="bottomicons" >
+                        <a class="bottomicon" href=""><i class="fa-brands fa-square-facebook"></i></a>
+                        <a class="bottomicon" href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a class="bottomicon" href=""><i class="fa-brands fa-instagram"></i></a>
+                </span></p>
+    </p>
+</section>
+</footer>
+</body>
+</html>
